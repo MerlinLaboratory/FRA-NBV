@@ -8,7 +8,7 @@
       name="description"
       content="RA-L paper website and supplementary material for FRA-NBV: A Fast and Reflectivity-Aware Next-Best-View Strategy."
     >
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
   </head>
   <body>
     <header class="site-header">
@@ -17,7 +17,7 @@
         <a href="#pipeline">Pipeline</a>
         <a href="#validation">Validation</a>
         <a href="#results">Results</a>
-        <a href="#additional-material">Additional Material</a>
+        <a href="#additional-material">Qualitative Results</a>
         <a href="#contact">Contact</a>
         <a href="#citation">Citation</a>
       </nav>
@@ -80,34 +80,32 @@
       <section class="content-section" id="validation">
         <p class="section-kicker">Experimental validation</p>
         <h2>Setup and Reconstruction Example</h2>
-        <div class="figure-grid two-columns">
-          <figure class="figure-card">
+        <figure class="combined-figure">
+          <div class="figure-grid two-columns figure-pair">
             <img src="assets/paper/experimental-setup.jpg" alt="Experimental setup">
-            <figcaption>Experimental setup.</figcaption>
-          </figure>
-          <figure class="figure-card">
             <img src="assets/paper/single-object-reconstruction.jpg" alt="Single-object reconstruction process">
-            <figcaption>Example reconstruction process for one object.</figcaption>
-          </figure>
-        </div>
+          </div>
+          <figcaption>
+            Experimental setup and example reconstruction process. Fixed lamps
+            provide consistent illumination of the object workspace, ensuring
+            repeatability across trials.
+          </figcaption>
+        </figure>
       </section>
 
       <section class="content-section" id="results">
         <p class="section-kicker">Results</p>
         <h2>Quantitative Results and Recovery Analysis</h2>
-        <div class="figure-stack">
-          <figure class="figure-card large">
-            <img src="assets/results_total_paper.png" alt="Aggregated FRA-NBV experimental results">
-            <figcaption>
-              Reconstruction percentage and experimental parameters for objects
-              with increasing reflectivity from Object A to Object D.
-            </figcaption>
-          </figure>
-          <figure class="figure-card large">
-            <img src="assets/paper/results-total-original.jpeg" alt="Object-level experimental result panels">
-            <figcaption>Object-level result panels used for the experimental comparison.</figcaption>
-          </figure>
-        </div>
+        <figure class="figure-card large results-overview">
+          <img src="assets/paper/results-total-website.png" alt="Objects and reconstruction percentages for the experimental validation">
+          <figcaption>
+            Objects used for the experimental validation, ordered with increasing
+            difficulty from Object A to Object D. The object photographs are shown
+            next to the final reconstruction percentages achieved by the compared
+            NBV strategies, highlighting the effect of increasingly reflective
+            surfaces.
+          </figcaption>
+        </figure>
 
         <div class="figure-grid two-columns analysis-grid">
           <figure class="figure-card">
@@ -129,7 +127,7 @@
 
       <section class="content-section qualitative" id="additional-material">
         <p class="section-kicker">Additional material</p>
-        <h2>Concave and Reflective Objects</h2>
+        <h2>Concave Objects Qualitative Results</h2>
         <div class="section-copy single">
           <p>
             Concave objects and mutual reflections are challenging because changing
@@ -142,116 +140,107 @@
           </p>
         </div>
 
-        <section class="additional-group" aria-labelledby="real-objects-title">
-          <h3 id="real-objects-title">Test Objects</h3>
-          <div class="figure-grid four-columns">
-            <figure class="figure-card">
-              <img src="assets/additional/object-1-robot.jpg" alt="Object 1 robot view">
-              <figcaption>Object 1, robot view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-1-close.jpg" alt="Object 1 close-up view">
-              <figcaption>Object 1, close-up view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-2-robot.jpg" alt="Object 2 robot view">
-              <figcaption>Object 2, robot view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-2-close.jpg" alt="Object 2 close-up view">
-              <figcaption>Object 2, close-up view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-3-robot.jpg" alt="Object 3 robot view">
-              <figcaption>Object 3, robot view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-3-close.jpg" alt="Object 3 close-up view">
-              <figcaption>Object 3, close-up view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-4-robot.jpg" alt="Object 4 robot view">
-              <figcaption>Object 4, robot view.</figcaption>
-            </figure>
-            <figure class="figure-card">
-              <img src="assets/additional/object-4-close.jpg" alt="Object 4 close-up view">
-              <figcaption>Object 4, close-up view.</figcaption>
-            </figure>
-          </div>
-        </section>
+        <div class="reconstruction-list">
+          <article class="comparison-block qualitative-object">
+            <h3>Object 1</h3>
+            <div class="object-media-grid">
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-robot.jpg" alt="Object 1 robot view">
+                <figcaption>Robot view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-close.jpg" alt="Object 1 close-up view">
+                <figcaption>Close-up view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-pb-a.png" alt="Object 1 PB-NBV reconstruction, view A">
+                <figcaption>PB-NBV, view A.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-pb-b.png" alt="Object 1 PB-NBV reconstruction, view B">
+                <figcaption>PB-NBV, view B.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-fra-a.png" alt="Object 1 FRA-NBV reconstruction, view A">
+                <figcaption>FRA-NBV, view A.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-1-fra-b.png" alt="Object 1 FRA-NBV reconstruction, view B">
+                <figcaption>FRA-NBV, view B.</figcaption>
+              </figure>
+            </div>
+          </article>
 
-        <section class="additional-group" aria-labelledby="reconstruction-title">
-          <h3 id="reconstruction-title">PB-NBV and FRA-NBV Reconstructions</h3>
-          <div class="reconstruction-list">
-            <article class="comparison-block">
-              <h4>Object 1</h4>
-              <div class="comparison-grid">
-                <figure class="figure-card">
-                  <img src="assets/additional/object-1-pb-a.png" alt="Object 1 PB-NBV reconstruction, view A">
-                  <figcaption>PB-NBV, view A.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-1-pb-b.png" alt="Object 1 PB-NBV reconstruction, view B">
-                  <figcaption>PB-NBV, view B.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-1-fra-a.png" alt="Object 1 FRA-NBV reconstruction, view A">
-                  <figcaption>FRA-NBV, view A.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-1-fra-b.png" alt="Object 1 FRA-NBV reconstruction, view B">
-                  <figcaption>FRA-NBV, view B.</figcaption>
-                </figure>
-              </div>
-            </article>
+          <article class="comparison-block qualitative-object">
+            <h3>Object 2</h3>
+            <div class="object-media-grid four-items">
+              <figure class="figure-card">
+                <img src="assets/additional/object-2-robot.jpg" alt="Object 2 robot view">
+                <figcaption>Robot view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-2-close.jpg" alt="Object 2 close-up view">
+                <figcaption>Close-up view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-2-pb.png" alt="Object 2 PB-NBV reconstruction">
+                <figcaption>PB-NBV.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-2-fra.png" alt="Object 2 FRA-NBV reconstruction">
+                <figcaption>FRA-NBV.</figcaption>
+              </figure>
+            </div>
+          </article>
 
-            <article class="comparison-block">
-              <h4>Object 2</h4>
-              <div class="comparison-grid two-columns">
-                <figure class="figure-card">
-                  <img src="assets/additional/object-2-pb.png" alt="Object 2 PB-NBV reconstruction">
-                  <figcaption>PB-NBV.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-2-fra.png" alt="Object 2 FRA-NBV reconstruction">
-                  <figcaption>FRA-NBV.</figcaption>
-                </figure>
-              </div>
-            </article>
+          <article class="comparison-block qualitative-object">
+            <h3>Object 3</h3>
+            <div class="object-media-grid four-items">
+              <figure class="figure-card">
+                <img src="assets/additional/object-3-robot.jpg" alt="Object 3 robot view">
+                <figcaption>Robot view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-3-close.jpg" alt="Object 3 close-up view">
+                <figcaption>Close-up view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-3-pb.png" alt="Object 3 PB-NBV reconstruction">
+                <figcaption>PB-NBV.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-3-fra.png" alt="Object 3 FRA-NBV reconstruction">
+                <figcaption>FRA-NBV.</figcaption>
+              </figure>
+            </div>
+          </article>
 
-            <article class="comparison-block">
-              <h4>Object 3</h4>
-              <div class="comparison-grid two-columns">
-                <figure class="figure-card">
-                  <img src="assets/additional/object-3-pb.png" alt="Object 3 PB-NBV reconstruction">
-                  <figcaption>PB-NBV.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-3-fra.png" alt="Object 3 FRA-NBV reconstruction">
-                  <figcaption>FRA-NBV.</figcaption>
-                </figure>
-              </div>
-            </article>
-
-            <article class="comparison-block">
-              <h4>Object 4</h4>
-              <div class="comparison-grid">
-                <figure class="figure-card">
-                  <img src="assets/additional/object-4-pb-a.png" alt="Object 4 PB-NBV reconstruction, view A">
-                  <figcaption>PB-NBV, view A.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-4-pb-b.png" alt="Object 4 PB-NBV reconstruction, view B">
-                  <figcaption>PB-NBV, view B.</figcaption>
-                </figure>
-                <figure class="figure-card">
-                  <img src="assets/additional/object-4-fra.png" alt="Object 4 FRA-NBV reconstruction">
-                  <figcaption>FRA-NBV.</figcaption>
-                </figure>
-              </div>
-            </article>
-          </div>
-        </section>
+          <article class="comparison-block qualitative-object">
+            <h3>Object 4</h3>
+            <div class="object-media-grid">
+              <figure class="figure-card">
+                <img src="assets/additional/object-4-robot.jpg" alt="Object 4 robot view">
+                <figcaption>Robot view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-4-close.jpg" alt="Object 4 close-up view">
+                <figcaption>Close-up view.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-4-pb-a.png" alt="Object 4 PB-NBV reconstruction, view A">
+                <figcaption>PB-NBV, view A.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-4-pb-b.png" alt="Object 4 PB-NBV reconstruction, view B">
+                <figcaption>PB-NBV, view B.</figcaption>
+              </figure>
+              <figure class="figure-card">
+                <img src="assets/additional/object-4-fra.png" alt="Object 4 FRA-NBV reconstruction">
+                <figcaption>FRA-NBV.</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="content-section contact-section" id="contact">

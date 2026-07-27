@@ -78,7 +78,7 @@ nav a:hover,
 
 main,
 footer {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1320px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -222,7 +222,7 @@ h4 {
 
 .video-frame {
   position: relative;
-  width: min(920px, 100%);
+  width: min(1180px, 100%);
   aspect-ratio: 16 / 9;
   margin: 0 auto;
   border: 1px solid #263033;
@@ -259,7 +259,7 @@ figcaption {
 }
 
 .hero-figure img {
-  width: min(1120px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -277,7 +277,8 @@ figcaption {
 }
 
 .figure-grid,
-.comparison-grid {
+.comparison-grid,
+.object-media-grid {
   display: grid;
   gap: 14px;
 }
@@ -294,8 +295,32 @@ figcaption {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.object-media-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.object-media-grid.four-items {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .analysis-grid {
   margin-top: 22px;
+}
+
+.combined-figure {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.figure-pair img {
+  width: 100%;
+  height: 390px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  object-fit: cover;
 }
 
 .figure-card {
@@ -316,6 +341,14 @@ figcaption {
 
 .figure-card.large img {
   max-height: 560px;
+}
+
+.results-overview {
+  margin-bottom: 22px;
+}
+
+.results-overview img {
+  max-height: none;
 }
 
 .four-columns .figure-card img {
@@ -347,6 +380,15 @@ figcaption {
 .comparison-block {
   padding-top: 22px;
   border-top: 1px solid var(--line);
+}
+
+.qualitative-object h3 {
+  margin-top: 0;
+}
+
+.qualitative-object .figure-card img {
+  height: clamp(220px, 19vw, 300px);
+  max-height: none;
 }
 
 pre {
@@ -387,7 +429,9 @@ footer {
 
   .two-columns,
   .four-columns,
-  .comparison-grid {
+  .comparison-grid,
+  .object-media-grid,
+  .object-media-grid.four-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -395,7 +439,7 @@ footer {
 @media (max-width: 620px) {
   main,
   footer {
-    width: min(100% - 28px, 1180px);
+    width: min(100% - 28px, 1320px);
   }
 
   .logo-row {
@@ -426,12 +470,16 @@ footer {
 
   .two-columns,
   .four-columns,
-  .comparison-grid {
+  .comparison-grid,
+  .object-media-grid,
+  .object-media-grid.four-items {
     grid-template-columns: 1fr;
   }
 
   .figure-card img,
-  .four-columns .figure-card img {
+  .four-columns .figure-card img,
+  .figure-pair img,
+  .qualitative-object .figure-card img {
     height: auto;
     max-height: none;
   }
