@@ -281,6 +281,11 @@ figcaption {
   white-space: nowrap;
 }
 
+.qualitative .section-copy {
+  width: 100%;
+  max-width: none;
+}
+
 .figure-stack {
   display: grid;
   gap: 22px;
