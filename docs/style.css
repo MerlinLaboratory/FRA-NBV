@@ -106,11 +106,7 @@ footer {
 }
 
 .merlin-logo {
-  height: clamp(52px, 7vw, 86px);
-}
-
-.polimi-logo {
-  height: clamp(42px, 6vw, 70px);
+  height: clamp(82px, 10vw, 132px);
 }
 
 .venue,
@@ -457,11 +453,7 @@ footer {
   }
 
   .merlin-logo {
-    height: 54px;
-  }
-
-  .polimi-logo {
-    height: 46px;
+    height: 72px;
   }
 
   h1 {
