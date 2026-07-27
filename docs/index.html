@@ -8,7 +8,7 @@
       name="description"
       content="RA-L paper website and supplementary material for FRA-NBV: A Fast and Reflectivity-Aware Next-Best-View Strategy."
     >
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
   </head>
   <body>
     <header class="site-header">
@@ -69,10 +69,24 @@
         <h2>Pipeline Overview</h2>
         <figure class="hero-figure">
           <img src="assets/pipeline.png" alt="FRA-NBV reconstruction pipeline overview">
-          <figcaption>
-            FRA-NBV maintains a voxel-based model and ellipsoidal approximation,
-            detects invalid depth measurements caused by reflective regions, and
-            selects recovery poses to improve reconstruction.
+          <figcaption class="pipeline-caption">
+            Overview of the proposed FRA-NBV pipeline. The method maintains
+            (a1) a voxel-based volumetric representation of the scene and
+            (a2) an auxiliary ellipsoidal representation that compactly
+            approximates occupied and frontier regions. The ellipsoidal model
+            supports fast view evaluation (b), where candidate poses are scored
+            by projecting ellipsoids onto the image plane and computing a utility
+            from projected areas. After selecting the next-best view (c), depth
+            acquisition on highly reflective surfaces may produce many invalid
+            pixels. A first filtering step (d) uses the projected object
+            silhouette to discard invalid pixels that are not attributable to
+            reflective regions. The remaining invalid pixels are then
+            back-projected through the ellipsoidal representation to localize the
+            3D reflective region responsible for missing measurements (e).
+            Finally, a dedicated restoration strategy (f) samples four tilted
+            recovery poses. The selected reflective 3D region, clustered as an
+            oriented bounding box, is projected into 2D and used within the same
+            projection-based evaluation to choose the recovery viewpoint.
           </figcaption>
         </figure>
       </section>

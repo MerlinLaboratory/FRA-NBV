@@ -271,6 +271,12 @@ figcaption {
   margin: 12px auto 0;
 }
 
+.hero-figure .pipeline-caption {
+  max-width: 1100px;
+  text-align: left;
+  line-height: 1.6;
+}
+
 .figure-stack {
   display: grid;
   gap: 22px;
