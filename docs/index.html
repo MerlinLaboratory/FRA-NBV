@@ -15,42 +15,199 @@
       <a class="brand" href="#">FRA-NBV</a>
       <nav aria-label="Main navigation">
         <a href="#paper">Paper</a>
+        <a href="#video">Video</a>
+        <a href="#qualitative-results">Qualitative Results</a>
         <a href="#materials">Materials</a>
         <a href="#citation">Citation</a>
       </nav>
     </header>
 
     <main>
-      <section class="intro" id="paper">
-        <div class="intro-copy">
-          <p class="venue">IEEE Robotics and Automation Letters, accepted July 2026</p>
-          <h1>FRA-NBV: A Fast and Reflectivity-Aware Next-Best-View Strategy</h1>
-          <p class="authors">
-            G. F. Preziosa, E. Setti, M. Faroni, A. M. Zanchettin, and P. Rocco
-          </p>
-          <p class="affiliation">Politecnico di Milano</p>
-          <div class="actions">
-            <a class="button primary" href="assets/fra-nbv-ral-preprint.pdf">Paper PDF</a>
-            <a class="button" href="#materials">Additional Material</a>
-          </div>
-        </div>
-        <figure class="teaser">
-          <img src="assets/pipeline.png" alt="FRA-NBV reconstruction pipeline overview">
-        </figure>
+      <section class="hero" id="paper">
+        <p class="venue">IEEE Robotics and Automation Letters, accepted July 2026</p>
+        <h1>FRA-NBV: A Fast and Reflectivity-Aware Next-Best-View Strategy</h1>
+        <p class="authors">
+          G. F. Preziosa, E. Setti, M. Faroni, A. M. Zanchettin, and P. Rocco
+        </p>
+        <p class="affiliation">Politecnico di Milano</p>
       </section>
 
-      <section class="content-section">
-        <h2>Overview</h2>
-        <p>
-          FRA-NBV is a reflectivity-aware next-best-view strategy for active 3D
-          reconstruction in robotic perception. The method targets challenging
-          reflective scenes by explicitly considering both reconstruction coverage
-          and sensing reliability.
-        </p>
+      <section class="video-section" id="video" aria-labelledby="video-title">
+        <h2 id="video-title">Video</h2>
+        <div class="video-frame">
+          <div class="play-mark" aria-hidden="true"></div>
+          <p>Video coming soon</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="assets/fra-nbv-ral-preprint.pdf">Paper PDF</a>
+          <a class="button" href="#qualitative-results">Additional Material</a>
+        </div>
+      </section>
+
+      <section class="content-section qualitative" id="qualitative-results">
+        <p class="section-kicker">Additional qualitative material</p>
+        <h2>Concave and Reflective Objects</h2>
+        <div class="section-copy">
+          <p>
+            Concave objects and mutual reflections are challenging because changing
+            the angle of incidence may not always be sufficient to recover missing
+            depth measurements. We therefore performed an additional qualitative
+            evaluation on four objects characterized by reflective surfaces,
+            concave regions, or both.
+          </p>
+          <p>
+            CAD models were not available for these objects, so the comparison is
+            qualitative. The reconstructions obtained with PB-NBV and FRA-NBV are
+            shown below. Overall, FRA-NBV remains less affected by concave and
+            reflective regions than the PB-NBV baseline.
+          </p>
+        </div>
+
+        <div class="object-list">
+          <article class="object-block">
+            <div class="object-heading">
+              <p>Object 1</p>
+              <h3>Reflective Appearance</h3>
+            </div>
+            <p>
+              Visual appearance alone was not sufficient to predict the difficulty
+              for the depth sensor. For Object 1, PB-NBV and FRA-NBV remain largely
+              comparable, with FRA-NBV yielding a slightly more compact
+              reconstruction.
+            </p>
+            <div class="source-views">
+              <figure>
+                <img src="assets/additional/object-1-robot.jpg" alt="Object 1 robot view">
+                <figcaption>Robot view</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/additional/object-1-close.jpg" alt="Object 1 close-up view">
+                <figcaption>Close-up view</figcaption>
+              </figure>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-column">
+                <h4>PB-NBV</h4>
+                <div class="image-pair">
+                  <img src="assets/additional/object-1-pb-a.png" alt="Object 1 PB-NBV reconstruction, view A">
+                  <img src="assets/additional/object-1-pb-b.png" alt="Object 1 PB-NBV reconstruction, view B">
+                </div>
+              </div>
+              <div class="comparison-column">
+                <h4>FRA-NBV</h4>
+                <div class="image-pair">
+                  <img src="assets/additional/object-1-fra-a.png" alt="Object 1 FRA-NBV reconstruction, view A">
+                  <img src="assets/additional/object-1-fra-b.png" alt="Object 1 FRA-NBV reconstruction, view B">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="object-block">
+            <div class="object-heading">
+              <p>Object 2</p>
+              <h3>Chrome Finish</h3>
+            </div>
+            <p>
+              Object 2 appeared highly reflective due to its chrome finish. The
+              reconstruction results show only minor differences between PB-NBV and
+              FRA-NBV, again with FRA-NBV producing a more compact reconstruction.
+            </p>
+            <div class="source-views">
+              <figure>
+                <img src="assets/additional/object-2-robot.jpg" alt="Object 2 robot view">
+                <figcaption>Robot view</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/additional/object-2-close.jpg" alt="Object 2 close-up view">
+                <figcaption>Close-up view</figcaption>
+              </figure>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-column">
+                <h4>PB-NBV</h4>
+                <img src="assets/additional/object-2-pb.png" alt="Object 2 PB-NBV reconstruction">
+              </div>
+              <div class="comparison-column">
+                <h4>FRA-NBV</h4>
+                <img src="assets/additional/object-2-fra.png" alt="Object 2 FRA-NBV reconstruction">
+              </div>
+            </div>
+          </article>
+
+          <article class="object-block">
+            <div class="object-heading">
+              <p>Object 3</p>
+              <h3>Concave Reflective Configuration</h3>
+            </div>
+            <p>
+              Object 3 was built from multiple instances of the most reflective
+              item used in the quantitative experiments, arranged to form a
+              concave region. PB-NBV struggles more in the inner part of the
+              concavity, whereas FRA-NBV provides a more complete reconstruction.
+            </p>
+            <div class="source-views">
+              <figure>
+                <img src="assets/additional/object-3-robot.jpg" alt="Object 3 robot view">
+                <figcaption>Robot view</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/additional/object-3-close.jpg" alt="Object 3 close-up view">
+                <figcaption>Close-up view</figcaption>
+              </figure>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-column">
+                <h4>PB-NBV</h4>
+                <img src="assets/additional/object-3-pb.png" alt="Object 3 PB-NBV reconstruction">
+              </div>
+              <div class="comparison-column">
+                <h4>FRA-NBV</h4>
+                <img src="assets/additional/object-3-fra.png" alt="Object 3 FRA-NBV reconstruction">
+              </div>
+            </div>
+          </article>
+
+          <article class="object-block">
+            <div class="object-heading">
+              <p>Object 4</p>
+              <h3>Strong Reflectivity and Concavity</h3>
+            </div>
+            <p>
+              Object 4 combined strong reflectivity with a concave region. One
+              face inside the concavity was difficult to acquire, and FRA-NBV
+              produced a visibly more complete reconstruction than PB-NBV.
+            </p>
+            <div class="source-views">
+              <figure>
+                <img src="assets/additional/object-4-robot.jpg" alt="Object 4 robot view">
+                <figcaption>Robot view</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/additional/object-4-close.jpg" alt="Object 4 close-up view">
+                <figcaption>Close-up view</figcaption>
+              </figure>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-column">
+                <h4>PB-NBV</h4>
+                <div class="image-pair">
+                  <img src="assets/additional/object-4-pb-a.png" alt="Object 4 PB-NBV reconstruction, view A">
+                  <img src="assets/additional/object-4-pb-b.png" alt="Object 4 PB-NBV reconstruction, view B">
+                </div>
+              </div>
+              <div class="comparison-column">
+                <h4>FRA-NBV</h4>
+                <img src="assets/additional/object-4-fra.png" alt="Object 4 FRA-NBV reconstruction">
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="content-section" id="materials">
-        <h2>Additional Material</h2>
+        <p class="section-kicker">Paper resources</p>
+        <h2>Materials</h2>
         <div class="material-grid">
           <a class="material-card" href="assets/fra-nbv-ral-preprint.pdf">
             <span>Paper</span>
@@ -66,11 +223,17 @@
           </a>
         </div>
         <figure class="wide-figure">
+          <img src="assets/pipeline.png" alt="FRA-NBV reconstruction pipeline overview">
+          <figcaption>FRA-NBV pipeline overview.</figcaption>
+        </figure>
+        <figure class="wide-figure">
           <img src="assets/results_total_paper.png" alt="Aggregated FRA-NBV experimental results">
+          <figcaption>Aggregated reconstruction results from the paper.</figcaption>
         </figure>
       </section>
 
       <section class="content-section" id="citation">
+        <p class="section-kicker">Reference</p>
         <h2>Citation</h2>
         <pre><code>@article{preziosa2026franbv,
   title = {FRA-NBV: A Fast and Reflectivity-Aware Next-Best-View Strategy},
