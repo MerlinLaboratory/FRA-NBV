@@ -174,11 +174,16 @@ h1 {
   color: var(--accent-strong);
 }
 
-.button.disabled {
+.button.primary {
   border-color: var(--accent);
   background: var(--accent);
   color: #ffffff;
-  cursor: default;
+}
+
+.button.primary:hover {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: #ffffff;
 }
 
 .video-section,
